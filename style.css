@@ -357,7 +357,7 @@ header ul li a{
     line-height: 30px;
   }
 
- @media (max-width: 1300px) {
+@media (max-width: 1300px) {
   
     header {
         height: auto;
@@ -369,7 +369,9 @@ header ul li a{
     }
 
     header .brand-logo {
-        margin: 0 0 15px 0; 
+        margin: 0 0 15px 0;
+        width: 180px;
+        height: auto;
     }
 
     header ul {
@@ -378,15 +380,16 @@ header ul li a{
         justify-content: center; 
         margin: 0 0 15px 0; 
         padding: 0;
-        gap: 24px;
+        gap: 15px;
+        flex-wrap: wrap;
     }
 
     header ul li {
-        margin: 0; 
+        margin: 0;
+        font-size: 16px;
     }
 
-   
-    header .btn-shift {
+    .btn-primary1 {
         margin: 0; 
         align-self: center; 
     }
@@ -395,37 +398,135 @@ header ul li a{
             flex-direction: column; 
             align-items: center;  
             justify-content: center;  
-            padding: 40px 20px;     
+            padding: 40px 20px;
+            min-height: auto;
         }
     
         .banner-left {
-            margin: 0 0 40px 0; 
-            width: 100%;
+            margin: 0 auto 40px; 
+            width: 95%;
             max-width: 620px;  
-            text-align: center; 
+            text-align: center;
+        }
+
+        .banner-left h1 {
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        .banner-left .top-decoration-img {
+            margin: -10px auto 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner-left .bottom-decoration-img {
+            margin: -2px auto 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner-description {
+            width: 100%;
+            height: auto;
+            margin: 30px auto;
+            padding: 0 10px;
         }
     
         .banner-right {
-            margin: 0 0 10px 0;
-            width: 100%;
-            max-width: 633px;
-            height: auto; 
+            margin: 20px auto;
+            width: 95%;
+            max-width: 500px;
+            height: auto;
+            min-height: 500px;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-elements {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            margin-top: 0;
+        }
+
+        .outer-circle {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+
+        .person-image {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
         }
     
-      
         .banner-buttons {
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
+            width: 100%;
         }
     
-        
-        .circle-elements, .outer-circle, .inner-circle, .person-image {
-            margin: 0 auto;
+        .score-card {
+            width: 280px;
+            max-width: 85vw;
+            height: auto;
+            padding: 12px;
+            top: 50%;
+            left: -5%;
+            transform: translateY(-50%);
         }
-        .person-image{
-            margin-top: -40px;
+
+        .score-number {
+            font-size: 42px;
+            padding: 10px;
+        }
+
+        .star-content {
+            padding: 15px 0;
+        }
+
+        .star-content .score-label {
+            font-size: 16px;
+        }
+
+        .stats-card {
+            width: 220px;
+            max-width: 85vw;
+            height: auto;
+            padding: 12px;
+            bottom: 10%;
+            right: -5%;
+        }
+
+        .stats-card .graduation-hat {
+            padding: 15px;
+        }
+
+        .stats-content {
+            padding: 15px 0;
+        }
+
+        .stats-number {
+            font-size: 22px;
+        }
+
+        .stats-text {
+            font-size: 15px;
+        }
+
+        .offerings-container {
+            padding: 40px 20px;
+            height: auto;
+        }
+
+        .heading-section p {
+            font-size: 22px;
+            text-align: center;
+            padding: 0 20px;
         }
 
         .offerings-grid {
@@ -482,244 +583,380 @@ header ul li a{
             gap: 20px;
             width: 100%;              
           }
-          .btn-primary2{
-            margin-left: -40px;  
-          }
+        .banner-buttons .btn-secondary {
+            width: 100%;
+            max-width: 280px;
+            margin: 0;
+        }
+
+        .banner-buttons .btn-primary2 {
+            width: 100%;
+            max-width: 220px;
+            margin: 0;
+        }
           
     
 }
+
 @media (max-width: 768px) {
-    body {
-        min-width: 1200px;
-    }
-    
-    .wrapper-content {
-        min-width: 1200px; 
-    }
     
     header {
-        height: 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 21px 24px;
-        max-width: 1450px;
-        width: 100%;
-        margin: auto;
+        padding: 15px;
     }
 
     header .brand-logo{
-        width: 231px;
-        height: 58px;
-        margin-right: 100px;
+        width: 160px;
+        height: auto;
+        margin: 0;
     }
 
     header ul {
-        display: flex;
-        list-style: none;
-        margin: 29px 0;  
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     header ul li{
-        font-size: 18px;
-        font-weight: 500;
-        padding: 10px;
-        margin: 0 20px;
+        font-size: 14px;
+        padding: 5px;
+        margin: 0 5px;
+    }
+
+    .btn-primary {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+        padding: 10px 15px;
     }
 
     .btn-primary1{
-        margin-right: 100px;
+        margin: 0;
     }
 
-
-    .banner{
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
+    .banner {
+        padding: 30px 15px;
+        min-height: auto;
     }
 
     .banner-left{
-        margin-left: 100px;
-        margin-top: 128px;
-        width: 620px;
+        margin: 0 auto 30px;
+        width: 100%;
+        padding: 0 15px;
     }
 
     .banner-left h1{
-        font-size: 64px;
-        font: bold;
-        line-height: 78px; 
-        position: relative; 
+        font-size: 32px;
+        line-height: 42px;
     }
 
     .banner-left .top-decoration-img{
-        display: block;
-        margin: -13px 0 0 50px;
+        margin: -8px auto 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-left .top-decoration-img img,
+    .banner-left .bottom-decoration-img img {
+        width: 70%;
+        max-width: 250px;
+        height: auto;
     }
 
     .banner-left .bottom-decoration-img{
-        display: block;
-        margin: -2px 0 0 0;
+        margin: -2px auto 0;
+        display: flex;
+        justify-content: center;
     }
 
     .banner-description{
-        width: 485px;
-        height: 136px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 34px;
-        margin: 38px 38px 0 0;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 20px 0;
     }
 
     .banner-buttons{
-        display: flex;
-        width: 460px;
-        justify-content: space-between;
-        margin-top: 38px;    
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
     }
 
     .banner-buttons .btn-secondary{
-        width: 302px;
-        height: 46px;
-        margin-right: 38px;
+        width: 100%;
+        max-width: 280px;
+        height: 44px;
+        font-size: 14px;
+        margin: 0;
     }
 
     .banner-buttons .btn-primary2{
-        width: 252px;
-        height: 46px;
+        width: 100%;
+        max-width: 220px;
+        height: 44px;
+        font-size: 14px;
     }
 
-
     .banner-right{
-        margin-top: 90px;
-        margin-left: 46px;
-        margin-right: 40px;
-        width: 633px;
-        height: 727px;
-        position: relative;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        min-height: 400px;
     }
 
     .circle-elements{
-        width: 636px;
-        height: 636px;
-        margin-top: 70px;
-        z-index: -100;
+        width: 100%;
+        max-width: 380px;
+        aspect-ratio: 1;
+        margin: 0 auto;
     }
 
     .outer-circle {
-        width: 636px;
-        height: 636px;
-    }
-
-    .inner-circle {
-        width: 450px;
-        height: 450px;
+        width: 100%;
+        padding-bottom: 100%;
     }
 
     .person-image{
         position: absolute;
-        top: 7px;
-        left: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .person-image img {
+        width: 100%;
+        height: auto;
     }
 
     .score-card {
-        width: 350px;
-        height: 117px;
-        position: absolute;
-        top: 55%;
-        left: -10%;
+        width: 90%;
+        max-width: 240px;
+        height: auto;
+        padding: 12px;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
     .score-number{
-        font-size: 64px;
-        padding: 20px 15px;
+        font-size: 36px;
+        padding: 8px;
     }
 
     .star-content{
-        width: 199px;
-        height: 56px;
-        padding: 30px 0;
+        width: auto;
+        height: auto;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .star-content .stars {
+        font-size: 14px;
+        margin-bottom: 5px;
     }
 
     .star-content .score-label{
-        font-size: 24px;
+        font-size: 14px;
     }
 
     .stats-card{
-        width: 270px;
-        height: 133px;
-        position: absolute;
-        bottom: 5%;
-        right: 2%;
+        width: 90%;
+        max-width: 200px;
+        height: auto;
+        padding: 10px;
+        bottom: 8%;
+        right: 50%;
+        transform: translateX(50%);
     }
 
     .stats-card .graduation-hat{
-        padding: 26px 23px;
+        padding: 10px;
+    }
+
+    .stats-card .graduation-hat img {
+        width: 35px;
+        height: auto;
     }
 
     .stats-content{
-        padding: 25px 0;
+        padding: 10px 0;
     }
 
     .stats-number{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .stats-text{
-        font-size: 17px;
+        font-size: 13px;
     }
 
     .offerings-container{
         width: 100%;
-        max-width: 1500px;
-        height: 700px;
-        padding: 50px 85px 59px 100px;
+        height: auto;
+        padding: 30px 15px;
     }
 
     .heading-section h2{
-        width: 154px;
-        height: 42px;
-        font-size: 18px;
-        padding: 10px 20px;
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        padding: 8px 16px;
     }
 
     .heading-section p{
-        margin-top: 26px;
-        font-size: 26px;
-        font-weight: 600;
+        margin-top: 20px;
+        font-size: 18px;
+        padding: 0 15px;
     }
 
     .offerings-grid {
-        display: flex;
-        gap: 28px;
-        justify-content: space-between;
-        align-items: stretch;
-        width: 100%;
-        margin-top: 50px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-top: 30px;
     }
 
     .feature-card {
-        flex: 1 1 260px;          
-        max-width: 298px;
-        height: 450px;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
         padding: 20px;
-        text-align: left;
     }
 
     .feature-card img {
-        width: 200px;
-        height: 149px;
-        margin: 0 auto 12px;
+        width: 150px;
+        height: auto;
     }
 
     .feature-card h3 {
-        font-size: 20px;
-        margin: 18px 20px 24px 20px;
+        font-size: 18px;
+        margin: 15px 10px 20px;
     }
 
     .feature-card p {
+        font-size: 16px;
+        line-height: 26px;
+        margin: 0 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .brand-logo {
+        width: 140px;
+    }
+
+    header ul li {
+        font-size: 12px;
+    }
+
+    .banner {
+        padding: 20px 10px;
+    }
+
+    .banner-left {
+        padding: 0 10px;
+    }
+
+    .banner-left h1 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .banner-left .top-decoration-img img,
+    .banner-left .bottom-decoration-img img {
+        width: 60%;
+        max-width: 180px;
+    }
+
+    .banner-description {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .banner-right {
+        max-width: 320px;
+        min-height: 350px;
+    }
+
+    .circle-elements {
+        max-width: 320px;
+    }
+
+    .person-image {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .score-card {
+        width: 85%;
+        max-width: 200px;
+        padding: 8px;
+        top: 45%;
+    }
+
+    .score-number {
+        font-size: 30px;
+        padding: 6px;
+    }
+
+    .star-content {
+        padding: 6px;
+    }
+
+    .star-content .stars {
+        font-size: 12px;
+    }
+
+    .star-content .score-label {
+        font-size: 12px;
+    }
+
+    .stats-card {
+        width: 85%;
+        max-width: 180px;
+        padding: 8px;
+        bottom: 10%;
+    }
+
+    .stats-card .graduation-hat {
+        padding: 8px;
+    }
+
+    .stats-card .graduation-hat img {
+        width: 30px;
+    }
+
+    .stats-content {
+        padding: 8px 0;
+    }
+
+    .stats-number {
         font-size: 18px;
-        line-height: 30px;
-        margin: 0 20px 20px 20px;
+    }
+
+    .stats-text {
+        font-size: 12px;
+    }
+
+    .heading-section p {
+        font-size: 16px;
+    }
+
+    .feature-card h3 {
+        font-size: 16px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 24px;
     }
 }
